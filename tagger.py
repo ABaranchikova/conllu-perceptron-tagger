@@ -177,6 +177,10 @@ class PerceptronTagger():
 		add('i+1 suffix', context[i+1][-3:])
 		add('i+2 word', context[i+2])
 		#print(word, '|||', features)
+		#new features
+		add('i suffix', word[-4:])
+		add('i suffix', word[-5:])
+		add('i-4 word', context[i - 4])
 		return features
 
 	def _make_tagdict(self, sentences):
